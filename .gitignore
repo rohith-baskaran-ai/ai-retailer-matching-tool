@@ -1,8 +1,10 @@
-echo __pycache__/>> .gitignore
-echo *.pyc>> .gitignore
-echo devtools/logs/>> .gitignore
-echo *.json.dump>> .gitignore
-echo .venv/>> .gitignore
-echo venv/>> .gitignore
-echo *.log>> .gitignore
-echo .env>> .gitignoreproduct_matching/
+__pycache__/
+*.pyc
+devtools/logs/
+logs/
+tests/logs/
+*.log
+*.json.dump
+.venv/
+venv/
+.env
