@@ -7,5 +7,7 @@
 | Config | ✅ Complete |
 | Logger | ✅ Complete (v1.1) |
 | Driver | ✅ Complete |
-| Browser | ⬜ Pending |
-| Tabs | ⬜ Pending |
+| Finder | ✅ Complete |
+| Tabs | ❌ Removed Merged into Browser  |
+| Browser | ✅ Complete |
+

@@ -48,3 +48,61 @@ Used By
 
 Status
 Production Ready ✅
+
+
+## Finder
+
+Location
+
+core/finder.py
+
+Responsibilities
+
+- Find single element
+- Find multiple elements
+- Read text
+- Read attributes
+- Click elements
+- Check element existence
+- Return page HTML
+
+Dependencies
+
+- Selenium
+- config.py
+
+Used By
+
+- Browser
+
+Status
+
+Production Ready ✅
+
+## Browser
+
+Location
+
+core/browser.py
+
+Responsibilities
+
+- Browser lifecycle
+- Navigation
+- Page information
+- Element operations
+- Tab management
+
+Dependencies
+
+- Driver
+- Finder
+- Logger
+
+Used By
+
+- All retailer modules
+
+Status
+
+Production Ready ✅
