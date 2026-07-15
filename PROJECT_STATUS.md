@@ -11,3 +11,13 @@
 | Tabs | ❌ Removed Merged into Browser  |
 | Browser | ✅ Complete |
 
+# Sprint 2 - Models
+
+| Module | Status |
+|---------|--------|
+| Product | ✅ Complete |
+| VariantProduct | ✅ Complete |
+| Candidate | ✅ Complete |
+| Job | ✅ Complete |
+| MatchResult | ✅ Complete |
+

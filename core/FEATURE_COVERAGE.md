@@ -2,53 +2,62 @@
 
 ---
 
+# Infrastructure
+
+## Config
+
+Location
+
+config.py
+
+Status
+
+✅ Complete
+
+Responsibilities
+
+- Global configuration
+- Browser settings
+- Timeouts
+- Search configuration
+
+---
+
 ## Logger
 
 Location
 
 core/logger.py
 
+Status
+
+✅ Complete
+
 Responsibilities
 
 - Console logging
 - File logging
-- Timestamped log files
 - Debug logging
 
-Used By
-
-- Browser
-- Parser
-- Search
-- Reader
-- Matcher
-- Workflow
+---
 
 ## Driver
 
 Location
+
 core/driver.py
 
-Purpose
-Creates and configures the Chrome WebDriver.
+Status
+
+✅ Complete
 
 Responsibilities
-- Configure Chrome options
-- Initialize WebDriver
-- Apply global browser configuration
+
+- Configure Chrome
+- Create WebDriver
 - Return configured driver
 
-Dependencies
-- config.py
-- core.logger
-- undetected_chromedriver
-
-Used By
-- Browser
-
-Status
-Production Ready ✅
-
+---
 
 ## Finder
 
@@ -56,34 +65,29 @@ Location
 
 core/finder.py
 
+Status
+
+✅ Complete
+
 Responsibilities
 
-- Find single element
-- Find multiple elements
+- Find elements
+- Wait for elements
 - Read text
 - Read attributes
 - Click elements
-- Check element existence
-- Return page HTML
 
-Dependencies
-
-- Selenium
-- config.py
-
-Used By
-
-- Browser
-
-Status
-
-Production Ready ✅
+---
 
 ## Browser
 
 Location
 
 core/browser.py
+
+Status
+
+✅ Complete
 
 Responsibilities
 
@@ -93,16 +97,137 @@ Responsibilities
 - Element operations
 - Tab management
 
-Dependencies
+---
 
-- Driver
-- Finder
-- Logger
+# Models
 
-Used By
+## Product
 
-- All retailer modules
+Location
+
+models/product.py
 
 Status
 
-Production Ready ✅
+✅ Complete
+
+Responsibilities
+
+- Store retailer-independent product information
+- Store parsed attributes
+- Store variants
+- Store specifications
+- Store retailer-independent data
+
+Used By
+
+- Parser
+- Readers
+- Matcher
+- Workflow
+
+---
+
+## VariantProduct
+
+Location
+
+models/variant_product.py
+
+Status
+
+✅ Complete
+
+Responsibilities
+
+- Store retailer SKU
+- Store availability
+- Store images
+- Store normalized attributes
+- Store price
+
+Used By
+
+- Walmart Reader
+- Variant Resolver
+- Matcher
+
+---
+
+## Candidate
+
+Location
+
+models/candidate.py
+
+Status
+
+✅ Complete
+
+Responsibilities
+
+- Store discovered Product
+- Store identity score
+- Store variant score
+- Store image score
+- Store final score
+- Store discovery metadata
+
+Used By
+
+- Search
+- Matcher
+- Workflow
+
+---
+
+## Job
+
+Location
+
+models/job.py
+
+Status
+
+✅ Complete
+
+Responsibilities
+
+- Store target product
+- Store search candidates
+- Store selected candidate
+- Store workflow status
+- Store processing comments
+
+Used By
+
+- Excel Reader
+- Workflow
+- Search
+- Matcher
+
+---
+
+## MatchResult
+
+Location
+
+models/match_result.py
+
+Status
+
+✅ Complete
+
+Responsibilities
+
+- Store final score
+- Store match decision
+- Store matching method
+- Store debug information
+- Store execution time
+
+Used By
+
+- Matcher
+- Workflow
+- Excel Writer
